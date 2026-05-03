@@ -64,6 +64,7 @@ AI Cleaner Agent System 是一个基于多 Agent 架构的 AI 智能磁盘管理
 - Token 使用量统计与展示
 - 安全执行机制（默认不进行真实删除）
 
+---
 
 ## 安全机制
 系统默认运行在 **SAFE MODE（安全模式）**：
@@ -71,4 +72,15 @@ AI Cleaner Agent System 是一个基于多 Agent 架构的 AI 智能磁盘管理
 - 所有操作仅做模拟与日志输出
 - 避免对操作系统造成影响
 
+---
+
+## 示例输出
+```text
+[Analyzer Agent] Analyzing file:
+→ Token usage: 2134
+→ Reasoning: 文件属于应用产生的临时缓存
+→ Classification: LIKELY_TEMP_FILE
+
+[Executor Agent]
+→ [SAFE MODE] Would delete: xxx.cache
 
