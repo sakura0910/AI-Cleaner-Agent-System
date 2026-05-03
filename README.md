@@ -1,45 +1,45 @@
 # AI Cleaner Agent System
 
-## Overview
-This project is an AI-driven multi-agent system for intelligent C drive management on Windows.
+## 项目概述
+本项目是一个基于 AI 的多 Agent 协同系统，用于实现 Windows C 盘的智能管理与清理。
 
-It is designed to simulate high token consumption scenarios through long-chain reasoning and agent collaboration.
+该系统通过多 Agent 协作与长链推理，模拟高 Token 消耗的复杂 AI 场景。
 
-## Core Problem
-Traditional disk cleanup tools cannot distinguish between:
-- System-critical files
-- AI development caches (e.g., model weights, IDE indexes)
-- Temporary or redundant files
+## 核心问题
+传统的磁盘清理工具无法有效区分：
+- 系统关键文件
+- AI 开发过程中产生的缓存（如模型权重、IDE 索引）
+- 临时文件或冗余数据
 
-This may lead to accidental deletion or inefficient cleanup.
+这可能导致误删重要文件或清理效率低下。
 
-## Architecture
+## 系统架构
 
-### 1. Scanner Agent
-- Scans the entire disk
-- Collects file paths, sizes, and types
+### 1. Scanner Agent（扫描代理）
+- 扫描整个磁盘
+- 收集文件路径、大小及类型信息
 
-### 2. Analyzer Agent
-- Uses LLM (MiMo/GPT-like models) to analyze file semantics
-- Determines whether files are safe to delete
-- Simulates high token consumption via reasoning tasks
+### 2. Analyzer Agent（分析代理）
+- 使用大语言模型（如 MiMo / GPT 类模型）进行语义分析
+- 判断文件是否可以安全删除
+- 通过推理任务模拟高 Token 消耗
 
-### 3. Executor Agent
-- Makes decisions based on Analyzer results
-- Performs safe cleanup with user confirmation
-- Supports rollback-safe operations (simulated)
+### 3. Executor Agent（执行代理）
+- 基于分析结果进行决策
+- 在用户确认后执行清理操作
+- 支持安全回滚机制（模拟实现）
 
-## Token Usage Simulation
-- ~5000 analysis requests per day
-- ~2000 tokens per request
-- Estimated daily usage: 10 million tokens
+## Token 消耗模拟
+- 每日约处理 5000 次分析请求
+- 每次推理约消耗 2000 Tokens
+- 预计每日总消耗约 1000 万 Tokens
 
-## Features
-- Multi-agent collaboration
-- Long-chain reasoning
-- AI-assisted decision making
-- Safe cleanup workflow
+## 功能特点
+- 多 Agent 协同工作
+- 长链推理能力
+- AI 辅助决策
+- 安全清理流程
 
-## Usage
+## 使用方法
 ```bash
 python cleaner.py
