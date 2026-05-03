@@ -1,5 +1,4 @@
 # AI Cleaner Agent System
-# AI Cleaner Agent System
 
 ## 项目概述
 AI Cleaner Agent System 是一个基于多 Agent 架构的 AI 智能磁盘管理系统，主要面向 Windows 环境下的 C 盘清理与治理。
